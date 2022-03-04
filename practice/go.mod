@@ -1,3 +1,3 @@
-module example
+module practice
 
 go 1.17
