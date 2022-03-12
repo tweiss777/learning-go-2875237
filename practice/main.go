@@ -5,8 +5,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
-	"strings"
 )
 
 func sumTwo(x int, y int) int {
@@ -16,18 +14,9 @@ func sumTwo(x int, y int) int {
 }
 
 func main() {
+	fmt.Printf("Welcome to the calculator\n")
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Enter the first number")
-	number1, _ := reader.ReadString('\n')
-	fmt.Println("Enter the second number")
-	number2, _ := reader.ReadString('\n')
-
-	conversion1, err1 := strconv.ParseInt(strings.TrimSpace(number1), 0, 64)
-	conversion2, err2 := strconv.ParseInt(strings.TrimSpace(number2), 0, 64)
-
-	if err1 != nil && err2 != nil {
-		sum = sumTwo(number1, number2)
-	}
+	input1, _ := reader.ReadString('\n')
+	input2, _ := reader.ReadString('\n')
 
 }
-
